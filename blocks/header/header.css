@@ -121,7 +121,9 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
 }
-
+.default-content-wrapper{
+  float:right;
+}
 header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   top: unset;
   bottom: 3px;
