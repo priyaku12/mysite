@@ -12,7 +12,7 @@
 
 .teaser > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
