@@ -104,8 +104,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
@@ -125,8 +124,8 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+ margin: 0px;
+ 
 }
 
 code,
@@ -234,8 +233,6 @@ main > .section {
 
 main > .section > div {
   max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
 }
 
 main > .section:first-of-type {

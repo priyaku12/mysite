@@ -53,27 +53,49 @@
 
 .carousel .carousel-slide .carousel-slide-content {
   z-index: 1;
-  margin: 68px;
   padding: 16px;
-  color: white;
-  background-color: rgb(19 19 19 / 75%);
+  padding-left: 1.2em;
+  color: black;
   position: relative;
   width: var(--slide-content-width, auto);
+  padding-bottom: 0;
+  padding-right: 0;
+  
+}
+
+.carousel-slide-content h2{
+    font-family: var(--fontFamilySerif, "Asar", Georgia, "Times New Roman", Times, serif);
+    margin: 1.3em 0;
+    font-weight: var(--fontWeightNormal, normal);
+    font-size: var(--fontSizeH2, 34px);
+    color: var(--textColor, #202020);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.carousel-slide-content p{
+    font-size: 17px;
+    width: 332px;
+    height: 126px;
+    line-height: 1.75;
+    margin: 0;
+    color: var(--textColor, #202020);
+    font-family: var(--fontFamilySansSerif, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif);
 }
 
 .carousel .carousel-slide-indicators {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 6px 12px;
   padding: 12px;
-  background-color: var(--light-color);
+  padding-left: 30px;
   line-height: 0;
 }
 
 .carousel .carousel-slide-indicator button {
-  width: 24px;
-  height: 24px;
+  width: 10px;
+  height: 10px;
   margin: 0;
   padding: 0;
   border-radius: 50%;
@@ -89,14 +111,18 @@
 
 .carousel .carousel-navigation-buttons {
   position: absolute;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
-  left: 12px;
-  right: 12px;
+  right: 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
+}
+
+.carousel .carousel-navigation-buttons button{
+  color: black !important;
+  background-color: white !important;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -139,15 +165,44 @@
   .carousel .carousel-navigation-buttons {
     left: 24px;
     right: 24px;
+    
   }
 
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: calc((100% - 184px) / 2);
 
-    margin: 92px;
+    
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
   }
+}
+
+.carousel-wrapper{
+  padding: 0 !important;
+  height : 560px;
+}
+
+.carousel .carousel-slide .carousel-slide-image picture > img {
+    height: 202px;
+    
+}
+
+.carousel-slide-content {
+  height: 300px;
+  margin-top: 158px !important;
+  width: 332px;
+  margin-bottom: 0;
+}
+
+.carousel-slide-content a.button{
+  background-color: var(--brandPrimary, #ffea00);
+  color: var(--textColor, #202020);
+  float: left;
+  font-size: var(--fontSizeSmall, 14px);
+  font-weight: var(--fontWeightBold, 600);
+  text-transform: uppercase;
+  border-radius: var(--buttonBorderRadius, 0);
+  padding: 1em 2.5em;
 }
