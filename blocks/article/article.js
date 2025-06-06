@@ -28,9 +28,9 @@ async function getQueryIndex(jsonUrl) {
 }
 
 export default async function decorate(block) {
-  const jsonUrl = block.dataset.jsonUrl || '/query-index.json';
+  const jsonUrl = '/query-index.json';
   const entries = await getQueryIndex(jsonUrl);
-
+//json-url=/query-index.json
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
 
   articles.forEach((entry) => {
