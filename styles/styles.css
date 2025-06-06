@@ -104,10 +104,10 @@ h3,
 h4,
 h5,
 h6 {
-  
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  height: 36px; 
+  font-family: var(--fontFamilySerif, "Asar", Georgia, "Times New Roman", Times, serif);
+  font-weight: var(--fontWeightNormal, normal);
+  line-height: 1.5;
   scroll-margin: 40px;
 }
 
@@ -252,3 +252,45 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+.section.accordion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  grid-template-rows: auto auto;  /* two rows */
+  gap: 20px;
+  padding: 15px;
+}
+
+/* First default content in first column, first row */
+.section.accordion-container > .default-content-wrapper:nth-of-type(1) {
+  width: 390px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Second default content in second column, first row */
+.section.accordion-container > .default-content-wrapper:nth-of-type(2) {
+  background: #90ee90;
+  
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Accordion below first column only */
+.section.accordion-container > .accordion-wrapper {
+  
+  
+  grid-column: 1; /* ONLY first column */
+  grid-row: 2;
+}
+
+/* Responsive: stack vertically */
+@media (max-width: 768px) {
+  .section.accordion-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .section.accordion-container > * {
+    grid-column: 1 !important;
+  }
+}
+
