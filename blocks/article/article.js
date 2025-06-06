@@ -1,36 +1,16 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
-function buildCardRow(entry) {
-  const row = document.createElement('div');
-
-  // Image container
-  const imgDiv = document.createElement('div');
-  const picture = createOptimizedPicture(entry.image, entry.title, false, [{ width: '750' }]);
-  imgDiv.append(picture);
-
-  // Body container
-  const bodyDiv = document.createElement('div');
-  bodyDiv.innerHTML = `
-    <h3><a href="${entry.path}">${entry.title}</a></h3>
-    <p>${entry.description || ''}</p>
-  `;
-
-  row.append(imgDiv, bodyDiv);
-  return row;
-}
-
-async function getQueryIndex(jsonUrl) {
-  const resp = await fetch(jsonUrl);
-  const json = await resp.json();
-  return json.data.map((row) =>
-    Object.fromEntries(json.columns.map((col, i) => [col, row[i]]))
-  );
-}
-
 export default async function decorate(block) {
-  const jsonUrl = '/query-index.json';
+  // Read config from first row (light gray row)
+  const config = Object.fromEntries(
+    [...block.querySelectorAll(':scope > div')][0]?.querySelectorAll('div')
+      ? [...block.querySelectorAll(':scope > div')][0].querySelectorAll('div')
+          .map((div) => div.textContent.split('=').map(s => s.trim()))
+      : []
+  );
+
+  const jsonUrl = config['json-url'] || '/query-index.json';
+
+  // Fetch and process entries
   const entries = await getQueryIndex(jsonUrl);
-//json-url=/query-index.json
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
 
   articles.forEach((entry) => {
@@ -38,6 +18,7 @@ export default async function decorate(block) {
     block.append(row);
   });
 
+  // Build <ul> structure
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
