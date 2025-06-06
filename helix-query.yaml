@@ -2,8 +2,6 @@ indices:
   mysite:
     include:
       - '**'
-    exclude: 
-      - []
     target: /query-index.json
     properties:
       title:
