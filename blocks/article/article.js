@@ -36,6 +36,7 @@ export default async function decorate(block) {
   const jsonUrl =  block.dataset.jsonUrl ||'/query-index.json';
    console.log('Fetching from:', jsonUrl);
   const entries = await getQueryIndex(jsonUrl);
+   console.log('Entries loaded:', entries);
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
 
   // Create rows from JSON entries
