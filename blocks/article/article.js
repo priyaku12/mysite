@@ -20,21 +20,28 @@ function buildCardRow(entry) {
 }
 
 async function getQueryIndex() {
-  const resp = await fetch('/query-index.json'); // <-- hardcoded here
+  console.log('Fetching JSON...');
+  const resp = await fetch('/query-index.json');
   if (!resp.ok) {
-    console.error('Failed to fetch query-index.json', resp.status);
+    console.error('Failed to fetch /query-index.json:', resp.status);
     return [];
   }
   const json = await resp.json();
-  return json.data.map((row) =>
-    Object.fromEntries(json.columns.map((col, i) => [col, row[i]]))
-  );
+  console.log('JSON fetched:', json);
+   
+  console.log('Raw columns:', json.columns);
+  console.log('Raw data:', json.data);
+ console.log('Raw data:', json.data);
+  return json.data; 
 }
-
 export default async function decorate(block) {
+   console.log('decorate called on block:', block);
   const entries = await getQueryIndex();
+   console.log('All entries:', entries);
 
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
+  
+console.log('Filtered articles:', articles);
 
   articles.forEach((entry) => {
     const row = buildCardRow(entry);
