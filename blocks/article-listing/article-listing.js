@@ -19,8 +19,8 @@ function buildCardRow(entry) {
   return row;
 }
 
-async function getQueryIndex() {
-  const resp = await fetch('/query-index.json');
+async function getQueryIndex(jsonUrl) {
+  const resp = await fetch(jsonUrl);
   const json = await resp.json();
   return json.data.map((row) =>
     Object.fromEntries(json.columns.map((col, i) => [col, row[i]]))
@@ -28,18 +28,16 @@ async function getQueryIndex() {
 }
 
 export default async function decorate(block) {
-  const entries = await getQueryIndex();
+  const jsonUrl = block.dataset.jsonUrl || '/query-index.json';
+  const entries = await getQueryIndex(jsonUrl);
 
-  // Filter only magazine articles
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
 
-  // Convert each article to a virtual row and append to block (imitating static cards)
   articles.forEach((entry) => {
     const row = buildCardRow(entry);
     block.append(row);
   });
 
-  // --- NOW APPLY YOUR CARDS DECORATION LOGIC ---
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
