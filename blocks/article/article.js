@@ -33,7 +33,7 @@ async function getQueryIndex(url) {
 }
 
 export default async function decorate(block) {
-  const jsonUrl = block.dataset.jsonUrl || '/query-index.json';
+  const jsonUrl = '/query-index.json';
 
   const entries = await getQueryIndex(jsonUrl);
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
