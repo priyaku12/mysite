@@ -19,32 +19,30 @@ function buildCardRow(entry) {
   return row;
 }
 
-async function getQueryIndex(url) {
-  try {
-    const resp = await fetch(url);
-    const json = await resp.json();
-    return json.data.map((row) =>
-      Object.fromEntries(json.columns.map((col, i) => [col, row[i]]))
-    );
-  } catch (e) {
-    console.error('Failed to load query index:', e);
+async function getQueryIndex() {
+  const resp = await fetch('/query-index.json'); // <-- hardcoded here
+  if (!resp.ok) {
+    console.error('Failed to fetch query-index.json', resp.status);
     return [];
   }
+  const json = await resp.json();
+  return json.data.map((row) =>
+    Object.fromEntries(json.columns.map((col, i) => [col, row[i]]))
+  );
 }
 
 export default async function decorate(block) {
-  const jsonUrl =  block.dataset.jsonUrl ||'/query-index.json';
-   console.log('Fetching from:', jsonUrl);
-  const entries = await getQueryIndex(jsonUrl);
-   console.log('Entries loaded:', entries);
+  const entries = await getQueryIndex();
+
   const articles = entries.filter((e) => e.path?.startsWith('/article'));
 
-  // Create rows from JSON entries
-  const virtualRows = articles.map(buildCardRow);
+  articles.forEach((entry) => {
+    const row = buildCardRow(entry);
+    block.append(row);
+  });
 
-  // Decorate like your original static code
   const ul = document.createElement('ul');
-  virtualRows.forEach((row) => {
+  [...block.children].forEach((row) => {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
