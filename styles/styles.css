@@ -179,7 +179,6 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-
   font-family: var(--body-font-family);
   font-style: normal;
   line-height: 1.25;
@@ -195,6 +194,7 @@ button {
   font-size: var(--fontSizeSmall, 14px);
   font-weight: var(--fontWeightBold, 600);
   padding: 1em 2.5em;
+    
 }
 
 a.button:hover,
