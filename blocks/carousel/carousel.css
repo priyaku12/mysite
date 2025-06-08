@@ -288,7 +288,7 @@ button.slide-next{
     border-top-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
-    left: 20px;
+    
 }
 button.slide-prev{
   position: relative;
@@ -297,5 +297,5 @@ button.slide-prev{
     border-top-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
-    left: 80px;
+    
 }
