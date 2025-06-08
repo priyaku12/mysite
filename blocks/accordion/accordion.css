@@ -87,7 +87,7 @@ h1#faqs {
 height: auto;
     margin-bottom: 7px;
     margin-top: 7px;
-    width: 212px;}
+    }
 
 .default-content-wrapper p{
     font-size: 20px;
@@ -115,4 +115,19 @@ height: auto;
   }
   .default-content-wrapper{
     margin-top: 27px;
+  }
+
+ 
+  @media (min-width: 1024px) and (max-width: 1440px){
+    .accordion details .accordion-item-body {
+  padding: 0 16px;
+  height: auto;
+    width: 721px;
+}
+.accordion details summary{
+  width: 721px;
+}
+.accordion details + details {
+  width: 721px;
+}
   }
