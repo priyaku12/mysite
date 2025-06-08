@@ -288,6 +288,7 @@ button.slide-next{
     border-top-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
+    left:0px;
     
 }
 button.slide-prev{
@@ -297,5 +298,6 @@ button.slide-prev{
     border-top-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
+    left:0px;
     
 }
