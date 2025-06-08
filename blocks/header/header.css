@@ -1,11 +1,45 @@
 /* header and nav layout */
+
 header .nav-wrapper {
-  background-color: var(--background-color);
-  width: 100%;
-  z-index: 2;
   position: fixed;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 69px;  
+  width: 360px;          /* smaller height for mobile */
+  padding-top: 10px;       /* less padding on mobile */
+  padding-bottom: 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  transition: padding 0.3s ease, height 0.3s ease;
+  
+}
+
+header .nav-wrapper.shrink {
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media (min-width: 900px) {
+  header .nav-wrapper {
+    height: 69px;
+    width: 1440px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  header .nav-wrapper.shrink {
+    height: 69px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  
+  .signin-bar {
+  min-width: 900px;
+  width: 1440px;
+  max-width: 1340px; /* or 960px, etc. */
+  padding-right: 300px;
+  margin: 0 auto;
+  padding-bottom: 5px ;
+  padding-top: 2px;
 }
 
 header nav {
@@ -45,6 +79,9 @@ header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
   }
+  
+
+}
 }
 
 header nav p {
@@ -166,13 +203,14 @@ header nav[aria-expanded='true'] .nav-sections {
 }
 
 header nav .nav-sections ul {
+  float:right;
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+   font-size: 14px;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -184,6 +222,7 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (width >= 900px) {
+  
   header nav .nav-sections {
     display: block;
     visibility: visible;
@@ -267,4 +306,59 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+}
+.section.nav-tools {
+  position: relative; /* make this a positioning context */
+  display: flex;
+  align-items: center;
+}
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  z-index: 999;
+}
+
+.signin-bar {
+  background-color: #0f0f0f;
+  text-align: right;
+  font-size: 14px;
+  min-height: 1px;
+  height: 21px;
+  padding-right: 300px;
+  border-bottom: 1px solid #ccc;
+}
+
+.signin-bar a {
+  color: #ffffff;
+      display: inline;
+  text-decoration: none;
+  
+  
+}
+
+
+input#nav-search-input{
+  padding-left: 30px;
+  width: 170px;
+  height: 46px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: 0px;
+  background-color: #ebebeb8a;
+}
+span.icon.icon-search{
+    position: absolute;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    transform: scaleX(-1);
+    top: 15px;
+    left: 32px;
+    bottom: 3px;
+   
 }

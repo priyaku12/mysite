@@ -140,7 +140,15 @@ pre {
   overflow-x: auto;
   white-space: pre;
 }
-
+main{
+  
+  
+}
+@media (min-width: 900px) {
+main{
+  padding-top: 127px;
+}
+}
 main > div {
   margin: 40px 16px;
 }
@@ -232,7 +240,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1500px;
 }
 
 main > .section:first-of-type {
@@ -248,7 +256,6 @@ main > .section:first-of-type {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
 }
@@ -293,4 +300,5 @@ main .section.highlight {
     grid-column: 1 !important;
   }
 }
+
 

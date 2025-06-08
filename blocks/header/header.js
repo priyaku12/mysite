@@ -145,6 +145,21 @@ export default async function decorate(block) {
       });
     });
   }
+    const searchContainer = document.createElement('div');
+  searchContainer.className = 'nav-search';
+
+  // Simple search icon + input markup (use inline SVG or Unicode for icon)
+  searchContainer.innerHTML = `
+    <input type="search" id="nav-search-input" placeholder="Search" aria-label="Search site" />
+  `;
+
+  // Append to nav-tools section if it exists, else append to nav
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    navTools.append(searchContainer);
+  } else {
+    nav.append(searchContainer);
+  }
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
@@ -159,8 +174,41 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  
+  const headerFixed = document.createElement('div');
+  headerFixed.className = 'header-fixed';
+
+  const signinBar = document.createElement('div');
+  signinBar.className = 'signin-bar';
+  signinBar.innerHTML = `
+  <a href="/login">SIGN IN  </a>
+  <a href="/login" class="lang-link">
+    EN-US <span class="arrow-down">▼</span>
+  </a>
+  `;
+
+
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
-  block.append(navWrapper);
+
+  // Append both to the fixed wrapper
+  headerFixed.append(signinBar);
+  headerFixed.append(navWrapper);
+
+  // Append fixed wrapper to block
+  block.append(headerFixed);
 }
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.nav-wrapper');
+  if (window.scrollY > 50) {
+    navbar.classList.add('shrink');
+  } else {
+    navbar.classList.remove('shrink');    
+  }
+});
+
+
+
