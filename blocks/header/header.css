@@ -22,7 +22,7 @@ header .nav-wrapper.shrink {
 @media (min-width: 900px) {
   header .nav-wrapper {
     height: 69px;
-    width: 1440px;
+    width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -32,12 +32,13 @@ header .nav-wrapper.shrink {
     padding-top: 5px;
     padding-bottom: 15px;
   }
-  
+  .header.block{
+    width: 100%;
+  }
   .signin-bar {
-  min-width: 900px;
-  width: 1440px;
-  max-width: 1340px; /* or 960px, etc. */
-  padding-right: 300px;
+  min-width: 1024px;
+  
+ 
   margin: 0 auto;
   padding-bottom: 5px ;
   padding-top: 2px;
