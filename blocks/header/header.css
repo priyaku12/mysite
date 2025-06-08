@@ -7,7 +7,7 @@ header .nav-wrapper {
   padding-top: 10px;       /* less padding on mobile */
   padding-bottom: 10px;
   background-color: var(--background-color);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
   z-index: 999;
   transition: padding 0.3s ease, height 0.3s ease;
   
@@ -17,6 +17,7 @@ header .nav-wrapper.shrink {
   height: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 @media (min-width: 900px) {
   header .nav-wrapper {
