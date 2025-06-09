@@ -2,20 +2,88 @@ footer {
   font-size: var(--body-font-size-xs);
   background-color: #202020;
   color: white;
-   margin-top: 100px;
+   margin-top: 50px;
+   display: flex;
+   flex-wrap: wrap;
 }
 
 footer .footer>div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
+      display: flex;
+
+    flex-wrap: wrap;
 }
 
+footer .footer>div .section:nth-of-type(1) {
+  width: 30%;
+  display: flex;
+  
+}
+
+footer .footer>div .section:nth-of-type(1) .icon-wkndlight{
+      width: 70px;
+    height: 25px;
+}
+footer .footer>div .section:nth-of-type(2) {
+  width: 66%;
+  display: flex;
+  
+}
+footer .footer>div .section:nth-of-type(2) .default-content-wrapper ul{
+      text-decoration: none;
+    list-style-type: none;
+}
+footer .footer>div .section:nth-of-type(2) .default-content-wrapper ul li{
+  font-size: 14px;
+  line-height: 40px;
+}
+footer .footer>div .section:nth-of-type(2) .default-content-wrapper ul li a{
+    color: white !important;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+        
+}
+footer .footer>div .section:nth-of-type(4) p:nth-of-type(1){
+    margin-top: 21px;
+    margin-bottom: 21px;
+    font-size: 1pc;
+    font-weight: 500;
+}
+footer .footer>div .section:nth-of-type(4) p:nth-of-type(2)
+{
+    width: 120px;
+    background-color: white;
+    display: flex;
+    gap: 18px;
+    /* grid-column-gap: 2px; */
+    height: 21px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 12px;
+    padding-right: 12px
+}
+footer .footer>div .section:nth-of-type(5) .default-content-wrapper ul{
+    margin-top: 15px;
+    font-size: 9pt;
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 1.25;
+    text-align: justify;
+}
+footer .footer>div .section:nth-of-type(5) .default-content-wrapper ul li{
+  margin-bottom: 10px;
+}
 footer .footer p {
   margin: 0;
 }
 
 @media (width >=900px) {
+  footer{
+    height: 250px;
+  }
   footer .footer>div {
     padding: 40px 32px 24px;
   }
@@ -28,7 +96,31 @@ footer .footer p {
     position: relative;
     top:-17px;
   }
+  footer .footer>div .section:nth-of-type(1) {
+  width: 100px;
+  display: flex;
+}
+  footer .footer>div .section:nth-of-type(1) .icon-wkndlight{
+    width: 128px;
+    height: 47px;
+  }
+footer .footer>div .section:nth-of-type(2) {
+  width: 500px;
+  display: flex;
+  
+}
+footer .footer>div .section:nth-of-type(4) .default-content-wrapper  {
 
+  display: flex;
+  gap:20px;
+  
+}
+footer .footer>div .section:nth-of-type(5) .default-content-wrapper ul  {
+  margin-top: 50px;
+  display: block;
+  gap:20px;
+  
+}
   footer .footer>div .section .default-content-wrapper {
     display: flex;
   }

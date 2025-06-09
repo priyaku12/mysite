@@ -259,6 +259,15 @@ main > .section:first-of-type {
   main > .section > div {
     padding: 0 32px;
   }
+  .teaser-container .default-content-wrapper .button-container{
+    border-bottom: 2px solid #ebebeb;
+    content: "";
+    display: block;
+    padding-top: 50px;
+    margin-top: 50px 0px;
+    width: 1259px;
+
+}
 }
 
 /* section metadata */
@@ -267,3 +276,14 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+h3#where-do-you-want-to-go {
+    margin: 28px;
+}
+
+/* .teaser-container .default-content-wrapper .button-container{
+    border-bottom: 2px solid var(--brandPrimary, #707070);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 100%;
+} */

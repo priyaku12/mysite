@@ -365,7 +365,7 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
     padding: 8px 0;
   }
-  
+
   .signin-bar {
     background-color: #0f0f0f;
     text-align: right;
@@ -385,22 +385,24 @@ header nav .nav-sections ul>li>ul>li {
     height: 68px;
     padding-left: 14px;
     padding-right: 14px;
-    margin-left: 124px;
     margin-right: 124px;
+    margin-left: 80px;
   }
-  .nav-wrapper .default-content-wrapper
- {
+
+  .nav-wrapper .default-content-wrapper {
     margin-top: 0px;
     padding-left: 14px;
     padding-right: 14px;
-}
-  .nav-wrapper .nav-tools .default-content-wrapper{
-    width:0px;
-  } 
-  .nav-wrapper .default-content-wrapper p
- {
-    width:0px;
-}
+  }
+
+  .nav-wrapper .nav-tools .default-content-wrapper {
+    width: 0px;
+  }
+
+  .nav-wrapper .default-content-wrapper p {
+    width: 0px;
+  }
+
   /* .nav-wrapper .nav-tools .default-content-wrapper .icon-search{
     top:0px;
     bottom:0px;
