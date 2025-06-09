@@ -27,27 +27,51 @@
   text-transform: uppercase;
   white-space: nowrap;
   width: 260px;
+
 }
 
 .profile>ul>li {
 
-  width: 260px;
-  height: 290px;
+  width: 263px;
+  height: 317px;
+  padding-top: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 18px;
+  justify-items: anchor-center;
 }
 
 .profile .cards-card-body {
-
+  text-align: center;
   margin-top: 0px;
+}
+
+.profile .cards-card-body h3 {
+  height: 21px;
+  font-family: var(--fontFamilySerif, "Asar", Georgia, "Times New Roman", Times, serif);
+  font-weight: var(--fontWeightNormal, normal);
+  font-size: 24px;
+}
+
+.profile .cards-card-body h5 {
+  height: 21px;
+  width: 271px;
+  font-family: var(--fontFamilySansSerif, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-weight: var(--fontWeightBold, 600);
+  text-transform: uppercase;
+  font-size: var(--fontSizeH5, 14px);
 }
 
 .profile .cards-card-image {
   line-height: 0;
 }
 
-.profile>ul>li img {
-  width: 100%;
+.profile>ul>li .cards-card-image img {
+  border-radius: 50%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  width: 164px;
+  height: 164px;
 }
 
 
@@ -76,12 +100,13 @@ h2#where-do-you-want-to-go {
   padding-right: 14px;
 }
 
-.cards-wrapper {
+.profile-wrapper {
 
-  margin-bottom: 40px;
-  max-height: fit-content;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-top: 40px !important;
+}
+
+h2#our-contributors {
+  margin-bottom: 50px;
 }
 
 .cards-wrapper .default-content-wrapper .button-container a {
@@ -96,28 +121,36 @@ h2#where-do-you-want-to-go {
 }
 
 @media (min-width: 900px) {
-  .cards-wrapper {
-    margin-left: 31px;
-    margin-right: 31px;
+  .profile-container {
+    margin-left: 138px !important;
+    margin-right: 138px !important;
+    height: 1095px;
   }
+}
 
-  h2#recent-articles {
-    margin-left: 31px;
-    margin-right: 31px;
-  }
+.cards-wrapper {
+  margin-left: 31px;
+  margin-right: 31px;
+}
 
-  h2#where-do-you-want-to-go {
-    margin-left: 31px;
-    margin-right: 31px;
-  }
-  p.button-container{
-    margin-left: 31px;
-    margin-right: 31px;
-  }
-  h2#next-adventures
-  {
-    margin-left: 31px;
-    margin-right: 31px;
-  }
+h2#recent-articles {
+  margin-left: 31px;
+  margin-right: 31px;
+}
+
+h2#where-do-you-want-to-go {
+  margin-left: 31px;
+  margin-right: 31px;
+}
+
+p.button-container {
+  margin-left: 31px;
+  margin-right: 31px;
+}
+
+h2#next-adventures {
+  margin-left: 31px;
+  margin-right: 31px;
+}
 
 }

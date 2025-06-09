@@ -2,7 +2,7 @@ footer {
   font-size: var(--body-font-size-xs);
   background-color: #202020;
   color: white;
-   
+   margin-top: 400px;
 }
 
 footer .footer>div {
