@@ -1,4 +1,4 @@
-.cards>ul {
+.profile>ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -29,22 +29,22 @@
   width: 260px;
 }
 
-.cards>ul>li {
+.profile>ul>li {
 
   width: 260px;
   height: 290px;
 }
 
-.cards .cards-card-body {
+.profile .cards-card-body {
 
   margin-top: 0px;
 }
 
-.cards .cards-card-image {
+.profile .cards-card-image {
   line-height: 0;
 }
 
-.cards>ul>li img {
+.profile>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
