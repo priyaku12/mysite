@@ -278,7 +278,6 @@ main .section.highlight {
 /* Second default content in second column, first row */
 .section.accordion-container > .default-content-wrapper:nth-of-type(2) {
   background: #90ee90;
-  
   grid-column: 2;
   grid-row: 1;
 }

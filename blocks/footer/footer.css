@@ -22,6 +22,11 @@ footer .footer p {
 
   footer .footer>div .section {
     display: inline-flex;
+    padding-left : 75px;
+    height: 45px;
+    padding-top: 2px;
+    position: relative;
+    top:-17px;
   }
 
   footer .footer>div .section .default-content-wrapper {
@@ -34,5 +39,9 @@ footer .footer p {
     gap: 50px;
     list-style: none;
     color: white;
+  }
+  span.icon.icon-wkndlight{
+    width: 128px;
+    height: auto;
   }
 }

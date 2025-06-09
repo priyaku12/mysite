@@ -1,0 +1,78 @@
+@media (min-width: 900px) {
+  .carousel .carousel-navigation-buttons {
+    left: 24px;
+    right: 24px;
+
+  }
+
+  .carousel .carousel-slides-container {
+    height: 650px;
+  }
+
+  .carousel .carousel-slide .carousel-slide-content {
+    --slide-content-width: calc((100% - 184px) / 2);
+
+
+  }
+
+  .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
+    --slide-content-width: auto;
+  }
+  .carousel-wrapper {
+    height: 700px;
+    /* or auto if you want dynamic */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .carousel .carousel-slide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 650px;
+
+  }
+
+  .carousel .carousel-slide .carousel-slide-image picture>img {
+    height:630px
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carousel .carousel-slide .carousel-slide-content {
+    --slide-content-width: 500px;
+    width: 500px;
+    margin-top: 80px !important;
+    margin-bottom: 0;
+    position: relative;
+    top: 200px;
+    background-color: white;
+    float: left;
+    width: 1136px;
+    padding-left: 28px;
+    padding-right: 28px;
+    height: 200px;
+    padding-top: 0px;
+    right: 80px;
+    padding-bottom: 0px;
+  }
+
+  button.slide-next {
+    position: relative;
+    bottom: -47px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    top: 25px;
+    left: 20px;
+
+
+  }
+
+  button.slide-prev {
+    top: 25px;
+    left: 1245px;
+  }
+}
