@@ -28,3 +28,6 @@
   text-overflow: ellipsis;
   width: 260px;
 }
+.article .cards-card-body p:last-of-type a{
+  color: black;
+}

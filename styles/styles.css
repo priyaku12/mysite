@@ -110,7 +110,14 @@ h6 {
   line-height: 1.5;
   scroll-margin: 40px;
 }
-
+main .default-content-wrapper>h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #ffea00;
+  margin-top: 10px;
+  width: 84px;
+}
 h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
 h3 { font-size: var(--heading-font-size-l); }
@@ -162,7 +169,7 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   overflow-wrap: break-word;
 }
@@ -260,69 +267,3 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
-.section.accordion-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
-  grid-template-rows: auto auto;  /* two rows */
-  gap: 20px;
-  padding: 15px;
-}
-
-/* First default content in first column, first row */
-.section.accordion-container > .default-content-wrapper:nth-of-type(1) {
-  width: 390px;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-/* Second default content in second column, first row */
-.section.accordion-container > .default-content-wrapper:nth-of-type(2) {
-  background: #90ee90;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-/* Accordion below first column only */
-.section.accordion-container > .accordion-wrapper {
-  
-  
-  grid-column: 1; /* ONLY first column */
-  grid-row: 2;
-}
-
-/* Responsive: stack vertically */
-@media (max-width: 768px) {
-  .section.accordion-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-  .section.accordion-container > * {
-    grid-column: 1 !important;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1440px) {
-   .section.accordion-container{
-  height: 1800px;
-  width: 1164px;
-  padding-left: 80px;
-  padding-right: 80px;
-}
-.accordion-wrapper{
-  padding: 0px;
-}
-  .section.accordion-container > .default-content-wrapper:nth-of-type(1){
-    width: 776px;
-    height: 500px;
-  }
-  .section.accordion-container > .default-content-wrapper:nth-of-type(1) p{
-    width: 748px;
-    height: 500px;
-  }
-  .default-content-wrapper p picture img{
-    height: 520px;
-    width: 776px;
-  }
-}
-

@@ -11,7 +11,7 @@ function buildCardRow(entry) {
   // Body container
   const bodyDiv = document.createElement('div');
   bodyDiv.innerHTML = `
-    <h3><a href="${entry.path}">${entry.title}</a></h3>
+    <p><a href="${entry.path}">${entry.title}</a><p>
     <p>${entry.description || ''}</p>
   `;
 

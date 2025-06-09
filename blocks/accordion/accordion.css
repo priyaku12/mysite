@@ -1,9 +1,5 @@
-.accordion details {
-  
-
-}
 .accordion-wrapper{
-  height: 340px;
+  height: auto;
     width: 332px;
     padding-left: 14px;
     padding-right: 14px;
@@ -86,7 +82,7 @@ h1#faqs {
 .default-content-wrapper p picture img{
 height: auto;
     margin-bottom: 7px;
-    margin-top: 7px;
+    margin-top: 30px;
     }
 
 .default-content-wrapper p{
@@ -118,7 +114,52 @@ height: auto;
   }
 
  
-  @media (min-width: 1024px) and (max-width: 1440px){
+ 
+
+
+.section.accordion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  grid-template-rows: auto auto;  /* two rows */
+  gap: 20px;
+  padding: 15px;
+}
+
+/* First default content in first column, first row */
+.section.accordion-container > .default-content-wrapper:nth-of-type(1) {
+  width: 390px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Second default content in second column, first row */
+.section.accordion-container > .default-content-wrapper:nth-of-type(2) {
+  background: #90ee90;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Accordion below first column only */
+.section.accordion-container > .accordion-wrapper {
+  
+  
+  grid-column: 1; /* ONLY first column */
+  grid-row: 2;
+}
+
+/* Responsive: stack vertically */
+@media (max-width: 768px) {
+  .section.accordion-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .section.accordion-container > * {
+    grid-column: 1 !important;
+  }
+}
+
+
+   @media (min-width: 1024px) and (max-width: 1440px){
     .accordion details .accordion-item-body {
   padding: 0 16px;
   height: auto;
@@ -130,4 +171,31 @@ height: auto;
 .accordion details + details {
   width: 721px;
 }
+
+   .section.accordion-container{
+  height: 1800px;
+  width:auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.accordion-wrapper{
+  padding: 0px;
+}
+  .section.accordion-container > .default-content-wrapper:nth-of-type(1){
+    width: 776px;
+    height: 500px;
   }
+  .section.accordion-container > .default-content-wrapper:nth-of-type(1) p{
+    width: 748px;
+    height: 500px;
+    margin-top: 41px;
+  }
+  .default-content-wrapper p picture img{
+    height: 520px;
+    width: 776px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px){
+
+}

@@ -71,7 +71,7 @@ h2#where-do-you-want-to-go {
   font-size: 24px;
 }
 
-.default-content-wrapper {
+.cards-wrapper .default-content-wrapper {
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -119,5 +119,67 @@ h2#where-do-you-want-to-go {
     margin-left: 31px;
     margin-right: 31px;
   }
+  .cards-wrapper .lock ul{
+  grid-template-columns: repeat(2, 1fr);
+    width: 400px;}
+  .cards-wrapper .lock ul li{ 
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    height: 359px;
+    width: 359px;
+    opacity: 0.7;
+  }
+  .cards-wrapper .lock ul li::before{
+     content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+  background: linear-gradient(
+    to left top,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(0, 0%, 100%, 0) 50%,
+    var(--brandPrimary, #ffea00) 50%,
+    var(--brandPrimary, #ffea00) 100%
+  );
 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 1;
+  }
+  .cards-wrapper .lock ul li::after {
+  content: url('/icons/lock.svg'); /* Or use emoji 🔒 or font icon */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+    opacity: 1;
+  display: block;
+  pointer-events: none;
+}
+  
+  .lock .cards-card-body p:nth-of-type(2) {
+    color:grey;
+    font-size: 14px;
+    font-family: roboto, roboto-fallback, sans-serif;;
+  }
+  .lock .cards-card-body p:nth-of-type(1) {
+    font-size: 18px;
+    font-family: roboto, roboto-fallback, sans-serif;;
+  }
+   .lock .cards-card-body .button-container{
+    margin-left: 0px;
+  }
+  .lock .cards-card-body .button-container .button
+  {
+    background-color: #ebebeb;
+  }
+  .lock>ul>li img{
+    height: 200px;
+  }
 }

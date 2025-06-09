@@ -145,7 +145,7 @@ export default async function decorate(block) {
       });
     });
   }
-    const searchContainer = document.createElement('div');
+  const searchContainer = document.createElement('div');
   searchContainer.className = 'nav-search';
 
   // Simple search icon + input markup (use inline SVG or Unicode for icon)
@@ -160,6 +160,18 @@ export default async function decorate(block) {
   } else {
     nav.append(searchContainer);
   }
+  
+    const searchInput = searchContainer.querySelector('#nav-search-input');
+      searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const query = searchInput.value.trim();
+    if (query) {
+      const googleURL = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      window.open(googleURL, '_blank'); // open in new tab
+    }
+  }
+});
+
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
@@ -174,7 +186,7 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
-  
+
   const headerFixed = document.createElement('div');
   headerFixed.className = 'header-fixed';
 
@@ -201,12 +213,12 @@ export default async function decorate(block) {
   block.append(headerFixed);
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const navbar = document.querySelector('.nav-wrapper');
   if (window.scrollY > 50) {
     navbar.classList.add('shrink');
   } else {
-    navbar.classList.remove('shrink');    
+    navbar.classList.remove('shrink');
   }
 });
 

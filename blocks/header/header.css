@@ -87,6 +87,7 @@ span.icon.icon-search {
   top: 15px;
   left: 32px;
   bottom: 3px;
+  line-height: 0px;
 
 }
 
@@ -387,4 +388,21 @@ header nav .nav-sections ul>li>ul>li {
     margin-left: 124px;
     margin-right: 124px;
   }
+  .nav-wrapper .default-content-wrapper
+ {
+    margin-top: 0px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+  .nav-wrapper .nav-tools .default-content-wrapper{
+    width:0px;
+  } 
+  .nav-wrapper .default-content-wrapper p
+ {
+    width:0px;
+}
+  /* .nav-wrapper .nav-tools .default-content-wrapper .icon-search{
+    top:0px;
+    bottom:0px;
+  }  */
 }
