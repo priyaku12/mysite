@@ -210,7 +210,9 @@ button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
 }
-
+a.button.secondary, button.secondary{
+  background-color: yellow;
+}
 button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
