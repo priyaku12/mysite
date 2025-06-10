@@ -9,10 +9,9 @@ header .nav-wrapper {
   /* less padding on mobile */
   padding-bottom: 10px;
   background-color: var(--background-color);
-
   z-index: 999;
   transition: padding 0.3s ease, height 0.3s ease;
-
+  width: 100vw;
 }
 
 header .nav-wrapper.shrink {
@@ -39,7 +38,7 @@ header nav .nav-tools {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
   background-color: #0f0f0f;
 }
@@ -51,10 +50,13 @@ header nav .nav-tools {
   min-height: 1px;
   height: 21px;
   border-bottom: 1px solid #ccc;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 0px;
+  padding-right: 0px;
   width: auto;
   border-bottom-width: 0px;
+  width: 100vw;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .signin-bar a {
@@ -91,7 +93,8 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
-
+      width: 100vw;
+    margin-right: 0px;
 }
 
 header nav[aria-expanded='true'] {
@@ -212,6 +215,7 @@ header nav .nav-sections {
   /* flex: 1 1 auto; */
   display: none;
   visibility: hidden;
+  width: 60vw;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
@@ -517,4 +521,7 @@ h2#all-articles{
   .cards>ul>li {
     width: 260px;
     height: 350px;
+        display: flex
+;
+    flex-direction: column-reverse;
 }

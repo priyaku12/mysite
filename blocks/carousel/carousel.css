@@ -61,6 +61,9 @@
   width: var(--slide-content-width, auto);
   padding-bottom: 0;
   padding-right: 0;
+  padding-top: 30px;
+  padding-right: 14px;
+  padding-left: 14px;
 
 }
 
@@ -256,12 +259,13 @@ button {
     right: 24px;
 
   }
+
   .carousel-slide-content a.button {
-  font-size: 16px;
-  padding: 1rem 1.5rem;
-  margin-top: 15px;
-  margin-left: 0px;
-}
+    font-size: 16px;
+    padding: 1rem 1.5rem;
+    margin-top: 15px;
+    margin-left: 0px;
+  }
 
   .carousel .carousel-slides-container {
     height: 650px;
