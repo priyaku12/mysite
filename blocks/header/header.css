@@ -517,10 +517,10 @@ h2#all-articles{
     text-align: justify;
     padding-left: 14px;
   }
-  .cards>ul>li {
+  /* .cards>ul>li {
     width: 260px;
     height: 350px;
         display: flex
 ;
     flex-direction: column-reverse;
-}
+} */
