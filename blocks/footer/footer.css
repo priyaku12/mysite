@@ -21,7 +21,9 @@ footer .footer>div .section:nth-of-type(1) {
   display: flex;
   
 }
-
+footer .footer>div .section:nth-of-type(1) a{
+     all:unset;
+}
 footer .footer>div .section:nth-of-type(1) .icon-wkndlight{
       width: 70px;
     height: 25px;
