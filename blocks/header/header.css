@@ -411,6 +411,10 @@ header nav .nav-brand img {
     background-color: var(--light-color);
     white-space: initial;
   }
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true'] {
+    width:100px;
+    background-color: white;
+  }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
     content: '';

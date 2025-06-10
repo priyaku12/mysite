@@ -20,7 +20,7 @@
   margin-top: 0;
 }
 
-.article .cards-card-body p:last-of-type {
+.article .cards-card-body p:nth-of-type(3) {
   color: dimgray;
   font-size: 14px;
   overflow: hidden;
