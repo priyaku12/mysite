@@ -185,7 +185,9 @@ h2#where-do-you-want-to-go {
   }
 }
 
-
+.lock ul{
+  height: 700px;
+}
 .cards-wrapper .lock ul li::before {
         content: "";
         position: absolute;

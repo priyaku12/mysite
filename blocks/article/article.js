@@ -35,7 +35,7 @@ async function getQueryIndex() {
   return json.data; 
 }
 export default async function decorate(block) {
-   console.log('decorate called on block:', block);
+  console.log('decorate called on block:', block);
   const entries = await getQueryIndex();
    console.log('All entries:', entries);
 
