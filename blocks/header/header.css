@@ -371,19 +371,32 @@ header nav .nav-brand img {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap:0px;
     margin: 0;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 87px;
+    text-align: center;
   }
-
-  header nav .nav-sections .default-content-wrapper>ul>li>ul {
-    display: none;
+   header nav .nav-sections .default-content-wrapper>ul>li :hover{
+     flex: 0 1 auto;
     position: relative;
-  }
+    background-color: yellow;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 87px;
+    text-align: center;
+    text-decoration: none;
+   }
 
   header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
     display: block;
