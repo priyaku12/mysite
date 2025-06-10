@@ -263,10 +263,9 @@ main > .section:first-of-type {
     border-bottom: 2px solid #ebebeb;
     content: "";
     display: block;
-    padding-top: 50px;
-    margin-top: 50px 0px;
+    margin-top: 0px 0px;
     width: 1259px;
-
+    padding-left: 25px;
 }
 }
 

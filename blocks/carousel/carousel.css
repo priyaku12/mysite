@@ -324,14 +324,14 @@ button {
     border-top-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
-    top: 25px;
+    top: 35px;
     left: 20px;
 
 
   }
 
   button.slide-prev {
-    top: 25px;
+    top: 35px;
     left: 1245px;
   }
 }

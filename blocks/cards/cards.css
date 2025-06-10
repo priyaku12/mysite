@@ -97,6 +97,7 @@ h2#where-do-you-want-to-go {
 
 @media (min-width: 900px) {
   .cards-wrapper {
+    margin-bottom: 0px;
     margin-left: 31px;
     margin-right: 31px;
   }

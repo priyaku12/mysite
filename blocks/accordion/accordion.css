@@ -79,13 +79,13 @@ h1#faqs {
     height: 70px;
     border-bottom: 2px solid var(--brandPrimary, #ffea00);
 }
-.default-content-wrapper p picture img{
+.section.accordion-container .default-content-wrapper p picture img{
 height: auto;
     margin-bottom: 7px;
     margin-top: 30px;
     }
 
-.default-content-wrapper p{
+.section.accordion-container .default-content-wrapper p{
     font-size: 20px;
     width: 370px;
     line-height: 2.5;
@@ -109,7 +109,7 @@ height: auto;
     padding-right: 13px;
 
   }
-  .default-content-wrapper{
+  .section.accordion-container .default-content-wrapper{
     margin-top: 27px;
   }
 
@@ -190,7 +190,7 @@ height: auto;
     height: 500px;
     margin-top: 41px;
   }
-  .default-content-wrapper p picture img{
+  .section.accordion-container .default-content-wrapper p picture img{
     height: 520px;
     width: 776px;
   }
